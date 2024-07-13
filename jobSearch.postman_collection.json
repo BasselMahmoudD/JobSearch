@@ -1,0 +1,739 @@
+{
+	"info": {
+		"_postman_id": "7fad0af6-48d3-4a57-bfa7-1b11f5c418e7",
+		"name": "jobSearch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26686655"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"omar\",\r\n    \"lastName\":\"mahmoud\",\r\n    \"email\":\"omar@furnato.com\",\r\n    \"password\":\"B123456789\",\r\n    \"recoveryEmail\":\"basselmahmoud@yahoo.com\",\r\n    \"DOB\":\"2002-04-25\",\r\n    \"mobileNumber\":\"01117934367\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"omar@furnato.com\",\r\n    \"password\":\"B12345678920\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/sign-in",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get My Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjhhYjk5ZTkxOGE4ZmEwOWRlODE4YWQiLCJpYXQiOjE3MjAzNjk1Mjh9.w_xnPZ2H6v07N-Tr7jH45FeRi9qbM2nhZ1L8pneS6eE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/get-my-profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"get-my-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjhhYjk5ZTkxOGE4ZmEwOWRlODE4YWQiLCJpYXQiOjE3MjAzNjk1Mjh9.w_xnPZ2H6v07N-Tr7jH45FeRi9qbM2nhZ1L8pneS6eE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/get-specific-user/668ac160cb15b605e159f616",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"get-specific-user",
+								"668ac160cb15b605e159f616"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjhhYjk5ZTkxOGE4ZmEwOWRlODE4YWQiLCJpYXQiOjE3MjAzNjk1Mjh9.w_xnPZ2H6v07N-Tr7jH45FeRi9qbM2nhZ1L8pneS6eE",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"B12345678920\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/update-password/668ac160cb15b605e159f616",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"update-password",
+								"668ac160cb15b605e159f616"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get All Recovery Email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"recoveryEmail\":\"basselmahmoud@yahoo.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/recovery-email",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"recovery-email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjhhYzE2MGNiMTViNjA1ZTE1OWY2MTYiLCJpYXQiOjE3MjAzNzQzNDh9.Vj8xxI6g-vYNOkVCgdYfz9kjzBcHnPEZUwOok4s0c94",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"mohamed\",\r\n    \"lastName\":\"ali\",\r\n    \"email\":\"mohamedAli@yahoo.com\",\r\n    \"recoveryEmail\":\"basselmahmoud@yahoo.com\",\r\n    \"DOB\":\"2000-12-13\",\r\n    \"mobileNumber\":\"01117934368\",\r\n    \"role\":\"company_HR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/update-user/668ab99e918a8fa09de818ad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"update-user",
+								"668ab99e918a8fa09de818ad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjhhYzE2MGNiMTViNjA1ZTE1OWY2MTYiLCJpYXQiOjE3MjAzNzQzNDh9.Vj8xxI6g-vYNOkVCgdYfz9kjzBcHnPEZUwOok4s0c94",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/delete-user/668ac160cb15b605e159f616",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"delete-user",
+								"668ac160cb15b605e159f616"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"pawilat760@furnato.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/forget-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"forget-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify otpCode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"otp\":\"368401\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/forget-password/verify-code/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhd2lsYXQ3NjBAZnVybmF0by5jb20iLCJpYXQiOjE3MjAzNzQ0NDd9.gWywHIP8Vyp_M3BwvP29SKe4IGH6JyW0Zz-Ta5RHGtc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"forget-password",
+								"verify-code",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhd2lsYXQ3NjBAZnVybmF0by5jb20iLCJpYXQiOjE3MjAzNzQ0NDd9.gWywHIP8Vyp_M3BwvP29SKe4IGH6JyW0Zz-Ta5RHGtc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update forget password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"B1117934369\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/forget-password/update-forget-password/668ab99e918a8fa09de818ad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"forget-password",
+								"update-forget-password",
+								"668ab99e918a8fa09de818ad"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "add Company",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjhiM2RlZjY3NjIyNTNjYjdkYTI4OTciLCJpYXQiOjE3MjA0NzMzNzh9.mS3cLItwJr8bdwxT5wzkqh612xOjjrDxwclr6BS1As4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"companyName\":\"assel\" ,\r\n    \"description\": \"bla bal\",\r\n    \"industry\":\"home\" ,\r\n    \"address\":\"ainshams\" ,\r\n    \"numberOfEmployees\":\"20\" ,\r\n    \"companyEmail\":\"assel@yahoo.com\" ,\r\n    \"companyHR\": \"668c5a80592b9b277bb3c16d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/company/add-company",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"company",
+								"add-company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update company",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjhiM2RlZjY3NjIyNTNjYjdkYTI4OTciLCJpYXQiOjE3MjA0MDE0NDN9.7ez3uAg2CFtJp65ZqgN9hcXHTZM4s35hwFm73ZZj1SM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"companyName\":\"ison\" ,\r\n    \"description\": \"bla bal\",\r\n    \"industry\":\"home\" ,\r\n    \"address\":\"ainshams\" ,\r\n    \"numberOfEmployees\":\"20\" ,\r\n    \"companyEmail\":\"ison@yahoo.com\" ,\r\n    \"companyHR\": \"668ab99e918a8fa09de817ad\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/company/update-company/668c5ecf27c957a9544971a7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"company",
+								"update-company",
+								"668c5ecf27c957a9544971a7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete company",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjhjNWE4MDU5MmI5YjI3N2JiM2MxNmQiLCJpYXQiOjE3MjA1MjMyMTN9.EWt_bh2EPKfVA4UmKGJEe4wy-L-yh7_2AtGt3b1GYFA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/company/delete-company/668d1914717359a9cf973775",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"company",
+								"delete-company",
+								"668d1914717359a9cf973775"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GEt specific company",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjhjNWE4MDU5MmI5YjI3N2JiM2MxNmQiLCJpYXQiOjE3MjA1MjMyMTN9.EWt_bh2EPKfVA4UmKGJEe4wy-L-yh7_2AtGt3b1GYFA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/company/get-specific-company/668c5ecf27c957a9544971a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"company",
+								"get-specific-company",
+								"668c5ecf27c957a9544971a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Company",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjhjNWE4MDU5MmI5YjI3N2JiM2MxNmQiLCJpYXQiOjE3MjA1MjMyMTN9.EWt_bh2EPKfVA4UmKGJEe4wy-L-yh7_2AtGt3b1GYFA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/company/search?name=ison",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"company",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "ison"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all applications",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Job",
+			"item": [
+				{
+					"name": "Add job",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjhjNWE4MDU5MmI5YjI3N2JiM2MxNmQiLCJpYXQiOjE3MjA1MjMyMTN9.EWt_bh2EPKfVA4UmKGJEe4wy-L-yh7_2AtGt3b1GYFA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobTitle\":\"Front-end\",\r\n    \"jobLocation\":\"remotely\",\r\n    \"workingTime\":\"full-time\",\r\n    \"seniorityLevel\":\"junior\",\r\n    \"jobDescription\":\"look for front-end developer\",\r\n    \"technicalSkills\":[\"html\" , \"css\" , \"js\"],\r\n    \"softSkills\":[\"one\" , \"two\"],\r\n    \"company\":\"668c5ecf27c957a9544971a7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/jobs/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jobs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Job",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjhjNWE4MDU5MmI5YjI3N2JiM2MxNmQiLCJpYXQiOjE3MjA1MjMyMTN9.EWt_bh2EPKfVA4UmKGJEe4wy-L-yh7_2AtGt3b1GYFA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"jobTitle\":\"Back-end\",\r\n    \"jobLocation\":\"hybrid\",\r\n    \"workingTime\":\"part-time\",\r\n    \"seniorityLevel\":\"team-Lead\",\r\n    \"jobDescription\":\"look for Back-end developer\",\r\n    \"technicalSkills\":[\"nodejs\" , \"express\" ],\r\n    \"softSkills\":[\"one\" , \"two\"],\r\n    \"company\":\"668c5ecf27c957a9544971a7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/jobs/668d471bb2ffadb5713b5af8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jobs",
+								"668d471bb2ffadb5713b5af8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete job",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjhjNWE4MDU5MmI5YjI3N2JiM2MxNmQiLCJpYXQiOjE3MjA1MjMyMTN9.EWt_bh2EPKfVA4UmKGJEe4wy-L-yh7_2AtGt3b1GYFA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/jobs/668d2d8c8c04248fef46c364",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jobs",
+								"668d2d8c8c04248fef46c364"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Jobs with company",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/jobs/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jobs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get job with specific company",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/jobs/get-job-for-specific-company?name=ison",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jobs",
+								"get-job-for-specific-company"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "ison"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/jobs/filter?workingTime=full-time",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jobs",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "workingTime",
+									"value": "full-time"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apply Job",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjhjNWE4MDU5MmI5YjI3N2JiM2MxNmQiLCJpYXQiOjE3MjA1MjMyMTN9.EWt_bh2EPKfVA4UmKGJEe4wy-L-yh7_2AtGt3b1GYFA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userTechSkills",
+									"value": "html,css",
+									"type": "text"
+								},
+								{
+									"key": "userSoftSkills",
+									"value": "one ,two",
+									"type": "text"
+								},
+								{
+									"key": "userResume",
+									"type": "file",
+									"src": "/C:/Users/mm/OneDrive/Pictures/1/CV.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/jobs/upload-application/668d4a41b1c9ba88004f77d5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"jobs",
+								"upload-application",
+								"668d4a41b1c9ba88004f77d5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
